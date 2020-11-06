@@ -65,7 +65,7 @@ button.stroke, .button.stroke {
     padding: 10px 50px;
 }
 
-li,a .navlink{
+#header li,a .navlink{
     font-family: 'Syne Mono', monospace;
     font-weight: 500;
     font-size: 30px;
@@ -190,4 +190,9 @@ table {
     background-color:black;
     color:white;
     text-align: center;
+}
+
+#contents{
+    padding: 40px;
+    
 }

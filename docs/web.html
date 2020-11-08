@@ -33,15 +33,141 @@
 
         <div id="main">
 
-            <h2><u>Web Development</u></h2>
+            <h2><u>Web Development, hosting and version control</u></h2>
+            <img width=500px height=auto src="../img/webdevelop.PNG" >
 
-            <p>This page is still in the works, please check back later!</p>
-            <img width=500px height=auto src="../img/soon.png" >
-           
+            <p>This topic consist of 3 sections: <strong>Website developing</strong> (feat. HTML &amp; CSS), <strong>Site hosting</strong> and lastly <strong>Version controlling</strong> (with Github). You can view each part by clicking on the tabs.    </p>
+            <p>Here I will be doing a summary on how I created this <a href="template.html" target="_blank">page template</a></li>, as well has hosting the site and version controlling it with Github.</p>
+
+        </div>
+
+
+        <div id="contents">
+            <h3>Click to view each segment</h3>
+
+            <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'webdevelop1')">Website developing</button>
+            <button class="tablinks" onclick="openCity(event, 'webdevelop2')">Site hosting</button>
+            <button class="tablinks" onclick="openCity(event, 'webdevelop3')">Version control</button>
+            </div>
+
+            <div id="webdevelop1" class="tabcontent">
+            <h2><u>Website developing</u></h2>
             
+            <p>Before we can start creating a website, we must first use a web editor. There are a many types of web editors you can use, for this I will be using <a href="https://code.visualstudio.com/">Visual Studios Code</a>.</p>
+
+            <h3 id="-u-html-css-u-"><u> HTML &amp; CSS</u></h3>
+            <p><em>HTML</em> (<strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage) describes the structure of information displayed on the website. Put it simply it is where you edit all the text and stuff you want to showcase on a page. </p>
+            <p>Simply create a new text document and change the file type to &quot;<em>html</em>&quot;. Here we will name our homepage &quot;index&quot;.</p>
+            <p><em>html</em> files is not enough to create a fancy webpage, we will need <em>CSS</em> (<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets) to help format the information displayed in <em>index.html</em>.</p>
+            <p>We can create one by simply changing the file type to &quot;.css&quot;. We will call it &quot;style&quot;.</p>
+            <img width=150px height=auto src="../img/htmlcss.PNG" >
+            <p>To start editing, open the file with the web editor of your choice. To view how the page looks like, open the <em>.html</em> file with a web browser.</p>
+
+            <h3 id="-u-html-basics-u-"><u> HTML Basics</u></h3>
+            <p>Before we can start doing anything, we must specify what document type it is, hence we type &quot; &lt;!DOCTYPE html&gt; &quot; at the start so the browser will read it as a html document.</p>
+            <p>Now we can prepare the main goods. Do note &quot;&lt;&quot; and &quot;&gt;&quot; are used to enclose a code. We also use &quot;/&quot; to declare where the code stops at.</p>
+            <p>Start by declaring which parts should be written as html:    </p>
+            <pre>
+                <code>
+                    <span class="hljs-section">&lt;!DOCTYPE html&gt;</span>
+                    <span class="hljs-section">&lt;html&gt;</span>
+                    <br>
+                    <span class="hljs-section">&lt;/html&gt;</span>
+                </code>
+            </pre>
+            <p>So everything should be written between <code>&lt;html&gt;</code> and <code>&lt;/html&gt;</code>.</p>
+
+            <p>We can declare what kind of information you in what parts of the webpage.</p>
+            <p>Here are the parameters we will be using and what stuff we&#39;ll add in it:</p>
+            <ul>
+            <li><code>&lt;head&gt;, &lt;/head&gt;</code> - Top page (page title, navigation tab)</li>
+            <li><code>&lt;body&gt;, &lt;/body&gt;</code> - middle page (contents)</li>
+            </ul>
+            <p>We&#39;ll add some text in there too:    </p>
+            <ul>
+            <li><code>&lt;p&gt;, &lt;/p&gt;</code> - paragraph text</li>
+            <li><code>&lt;h1&gt;, &lt;/h1&gt;</code> - Heading<br></li>
+            </ul>
+            <p>For headings, there is a range from &#39;h1&#39; to &#39;h6&#39;, decreasing in font size.</p>
+
+            <p> At the end the resulting code looks like this:</p>
+            <img width=400px height=auto src="../img/starteg.PNG" ><br>
+            <img width=400px height=auto src="../img/startegout.PNG" >
+
+            <p>From here we are mostly done with learning how to add content to our website.</p>
+            <p>Links for more details about html:</p>
+            <ul>
+            <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML Tutorial by W3Schools</li></a>
+            <li><a href="https://youtu.be/bWPMSSsVdPk" target="_blank">Learn HTML is 12 minutes by Jake Wright</li></a>
+            <li><a href="https://youtu.be/KJ13lX20FqU" target="_blank">Learn More HTML in 12 Minutes by Jake Wright</li></a>
+             </ul>
+
+             <h3><u>Fancy CSS</u></h3>
+             <p><small>CSS is the MSG for your website....~</small></p>
+
+
+
             
-           
-            
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div id="webdevelop2" class="tabcontent">
+             <h2><u>Site hosting</u></h2>
+              <p>soon</p> 
+            </div>
+
+            <div id="webdevelop3" class="tabcontent">
+            <h2><u>Version control</u></h2>
+            <p>soon</p>
+            </div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </div>
 

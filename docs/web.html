@@ -47,8 +47,8 @@
 
             <div class="tab">
             <button class="tablinks" onclick="openCity(event, 'webdevelop1')">Website developing</button>
-            <button class="tablinks" onclick="openCity(event, 'webdevelop2')">Site hosting</button>
-            <button class="tablinks" onclick="openCity(event, 'webdevelop3')">Version control</button>
+            <button class="tablinks" onclick="openCity(event, 'webdevelop2')">Version control</button>
+            <button class="tablinks" onclick="openCity(event, 'webdevelop3')">Site hosting</button>
             </div>
 
             <div id="webdevelop1" class="tabcontent">
@@ -83,6 +83,8 @@
             <ul>
             <li><code>&lt;head&gt;, &lt;/head&gt;</code> - Top page (page title, navigation tab)</li>
             <li><code>&lt;body&gt;, &lt;/body&gt;</code> - middle page (contents)</li>
+            <p>We can also rename the page title that will appear in the browser tab with <code>&lt;title&gt;</code>.</p>
+
             </ul>
             <p>We&#39;ll add some text in there too:    </p>
             <ul>
@@ -96,36 +98,130 @@
             <img width=400px height=auto src="../img/startegout.PNG" >
 
             <p>From here we are mostly done with learning how to add content to our website.</p>
-            <p>Links for more details about html:</p>
+            <p>Useful links to know more about html and other functions:</p>
             <ul>
             <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML Tutorial by W3Schools</li></a>
             <li><a href="https://youtu.be/bWPMSSsVdPk" target="_blank">Learn HTML is 12 minutes by Jake Wright</li></a>
             <li><a href="https://youtu.be/KJ13lX20FqU" target="_blank">Learn More HTML in 12 Minutes by Jake Wright</li></a>
-             </ul>
+            </ul>
+
+            <p>Hence a code like this:</p>
+<pre><code><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span> Topics<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header"</span>&gt;</span>  
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>『EP1000 DIGI FABLAB』<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navlink"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../index.html"</span> &gt;</span>|Home|<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../prj/project.html"</span>&gt;</span>|Projects|<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"topics.html"</span> &gt;</span>|Topics|<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Head</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"container"</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"main"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">u</span>&gt;</span>Template<span class="hljs-tag">&lt;/<span class="hljs-name">u</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a template page<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">width</span>=<span class="hljs-string">500px</span> <span class="hljs-attr">height</span>=<span class="hljs-string">auto</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../img/soon.png"</span> &gt;</span>
+             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contents"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"-ins-cool-beans-ins-"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">ins</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Cool Beans<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ins</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>So when I want to create a new page I can just copy-paste the code from this page :v<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"footer"</span>&gt;</span>
+            Copyright &amp;copy; Me (T_T), all rights reserved ~
+             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#header"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>↑ Go to Top ↑<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+            </code></pre><p>Will look like this:</p>
+            <img width=70% height=auto src="../img/htmlonly.PNG" >
+
+
 
              <h3><u>Fancy CSS</u></h3>
              <p><small>CSS is the MSG for your website....~</small></p>
 
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
+             <p>There are multiple ways to use CSS in your HTML documents</p>
+            <ol>
+            <li>Adding them in HTML elements with <code>style</code> attributes <br></li>
+            <li>Using <code>&lt;style&gt;</code> element in html sections</li>
+            <li>Creating an external CSS document and linking it to the HTML document.</li>
+            </ol>
+            <p>Here we will be using option 3. Not only it is more organised but you can use the same document for multiple pages, all for the consistency. For this we will link the .css document by adding <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../style.css&quot; /&gt;</code> into the top of the html document.</p>
+            <p> Here is the CSS code for the about page:</p>
+            <img width=300px height=auto src="../img/css_about.PNG" >
+            <p>A CSS rule-set consits of selectors and a declaration block
+                In this case, <code>#page_about .about</code> is the selector where:</p>
+                <ul>
+                <li><code>#page_about</code> is the ID. You select this element with <code>id=page_about</code></li>
+                <li><code>.about</code> is the class. You select this with <code>class=&quot;about&quot;</code></li>
+                </ul>
+                <p>You can combine selectors to make things more specific:<br></p>
+                <ul>
+                <li><code>#page_about .about</code> : Only information in <code>#page_about</code> with the class <code>&quot;about&quot;</code> will be affected.</li>
+                </ul>
+                <p>If multiple elements share the same style, you can add them in a single syntax:</p>
+                <ul>
+                <li><code>.about, .main</code> : Information in class <code>&quot;about&quot;</code> and <code>&quot;main&quot;</code> will share the same properties.</li>
+                </ul>
+                <p>And so after hours of experimenting with CSS, I ended up with the page design you see before you. During those trial and errors there will surely be that one moment your entire page breaks and you don&#39;t know why so you end up doing a rollback on your code.<br>Up next is how I manage this with Version controlling (with github).</p>
+                <a href="#contents">Back to top</a></li>
 
             </div>
 
             <div id="webdevelop2" class="tabcontent">
-             <h2><u>Site hosting</u></h2>
-              <p>soon</p> 
+             <h2><u>Version Control</u></h2>
+             <p>Back when I play Minecraft creative (I still do) I had the fear of losing my 4 years of building from file corruption or I mess something up, so now when I finish a huge project I would copy the file and save it in a hard drive in the events I needed to rollback.<br></p>
+             <p>It indeed took alot of space.</p>
+             <br>
+             <p>Version control is basically the management of changes to documents and collections of information. In practice a change of such document is done by labelling with a number to indicate its version (i.e date of save, V1, V1a, etc.)</p>
+             <p>It also allows multiple developers to work on a project, allow one to experiment on new things without interfering with the current project and also allow one to review and see changes in multiple versions of the project.</p>
+            <h3> Version Control with Git.</h3>
+             <p>First install <a href="https://git-scm.com/downloads" target="_blank">Git</a> from its website.</p>
+             
+             <p>Once you download Git, you can either use Git Bash or the command prompt to set up.<br>
+                First is to set your username and email address:<br>
+                <code>git config --global user.name &quot;My username&quot;</code><br>
+                <code>git config --global user.emal &quot;Me@gmail.com&quot;</code>
+                <br>     </p>
+                <p>Next is to initialize a repository.<br>
+                    Create and locate the project folder:<br>For windows: <code>cd C:/Users/user/my_project</code><br>
+                    Then type <code>git init</code> .</p>
+                    <p>You can check the file status with <code>git status</code>. <br>
+                        To add files use <code>git add &lt;file&gt;</code>.
+                         Alternatively, use <code>git rm &lt;file&gt;</code> to remove files.  Adding files will bring it to the staging area.</p>
+                         <p>After that you can commit the file with <code>git commit -m &quot;[descriptive message]&quot;</code> and it will be recorded. The descriptive message describes the changes made to the file and will come in handy when you want to recall previous versions of the file.</p>
+                         <p>And finally you can publish the commits with <code>git push</code>. To view logs simply type <code>git log</code>. </p>
+                         <p>Thats the basics of git. You can learn more about it in the links below:</p>
+                         <ul>
+                         <li><a href="https://youtu.be/USjZcfj8yxE" target="_blank">Learn Git in 15 Minutes</a></li>
+                         <li><a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup" target="_blank">Git-scm.com</a></li>
+                         <li><a href="https://youtu.be/HVsySz-h9r4" target="_blank">Git tutorial for beginners</a></li>
+                         </ul>
+                         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
 
             <div id="webdevelop3" class="tabcontent">

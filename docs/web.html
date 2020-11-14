@@ -33,10 +33,10 @@
 
         <div id="main">
 
-            <h2><u>Web Development, hosting and version control</u></h2>
+            <h2><u>Web Development and version control</u></h2>
             <img width=500px height=auto src="../img/webdevelop.PNG" >
 
-            <p>This topic consist of 3 sections: <strong>Website developing</strong> (feat. HTML &amp; CSS), <strong>Site hosting</strong> and lastly <strong>Version controlling</strong> (with Github). You can view each part by clicking on the tabs.    </p>
+            <p>This page is about <strong>Website developing</strong> (feat. HTML &amp; CSS) and <strong>Version controlling</strong> (with Github). You can view each part by clicking on the tabs.    </p>
             <p>Here I will be doing a summary on how I created this <a href="template.html" target="_blank">page template</a></li>, as well has hosting the site and version controlling it with Github.</p>
 
         </div>
@@ -182,23 +182,28 @@
              <br>
              <p>Version control is basically the management of changes to documents and collections of information. In practice a change of such document is done by labelling with a number to indicate its version (i.e date of save, V1, V1a, etc.)</p>
              <p>It also allows multiple developers to work on a project, allow one to experiment on new things without interfering with the current project and also allow one to review and see changes in multiple versions of the project.</p>
-            <h3> Version Control with Git.</h3>
+           
+             <h3> Version Control with Git.</h3>
              <p>First install <a href="https://git-scm.com/downloads" target="_blank">Git</a> from its website.</p>
              
              <p>Once you download Git, you can either use Git Bash or the command prompt to set up.<br>
                 First is to set your username and email address:<br>
-                <code>git config --global user.name &quot;My username&quot;</code><br>
-                <code>git config --global user.emal &quot;Me@gmail.com&quot;</code>
+                <code>$ git config --global user.name &quot;My username&quot;</code><br>
+                <code>$ git config --global user.emal &quot;Me@gmail.com&quot;</code>
                 <br>     </p>
                 <p>Next is to initialize a repository.<br>
-                    Create and locate the project folder:<br>For windows: <code>cd C:/Users/user/my_project</code><br>
-                    Then type <code>git init</code> .</p>
-                    <p>You can check the file status with <code>git status</code>. <br>
-                        To add files use <code>git add &lt;file&gt;</code>.
-                         Alternatively, use <code>git rm &lt;file&gt;</code> to remove files.  Adding files will bring it to the staging area.</p>
-                         <p>After that you can commit the file with <code>git commit -m &quot;[descriptive message]&quot;</code> and it will be recorded. The descriptive message describes the changes made to the file and will come in handy when you want to recall previous versions of the file.</p>
-                         <p>And finally you can publish the commits with <code>git push</code>. To view logs simply type <code>git log</code>. </p>
-                         <p>Thats the basics of git. You can learn more about it in the links below:</p>
+                    Create and locate the project folder:<br>For windows: <code>$ cd C:/Users/user/my_project</code><br>
+                    Then type <code>$ git init</code> .</p>
+                    <p>You can check the file status with <code>$ git status</code>. <br>
+                        To add files use <code>$ git add &lt;file&gt;</code>.
+                         Alternatively, use <code>$ git rm &lt;file&gt;</code> to remove files.  Adding files will bring it to the staging area.</p>
+                         <p>After that you can commit the file with <code>$ git commit -m &quot;[descriptive message]&quot;</code> and it will be recorded. The descriptive message describes the changes made to the file and will come in handy when you want to recall previous versions of the file.</p>
+                         <p>And finally you can publish the commits with <code>$ git push</code>. To view logs simply type <code>$ git log</code>. </p>
+                         <p> This diagram illustrates how it works: </p>
+                         <img width=600px height=auto src="../img/gitcommand.jpg" >
+                         <p>You can clone a repository with <code>$ git clone [Link]</code> . This will download it to your local machine.</p>
+
+                         <p>Whats stated here are just the basics of Git. You can learn more from the links below:</p>
                          <ul>
                          <li><a href="https://youtu.be/USjZcfj8yxE" target="_blank">Learn Git in 15 Minutes</a></li>
                          <li><a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup" target="_blank">Git-scm.com</a></li>

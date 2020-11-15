@@ -52,6 +52,13 @@ button.stroke, .button.stroke {
     background-color: #555; /* Add a dark-grey background on hover */
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
 #header {
     box-sizing: border-box;
     background-color: #8bc7be;

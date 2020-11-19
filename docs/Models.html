@@ -2,7 +2,7 @@
 <html>
 
 <Head>
-    <title> Topics</title>
+    <title> Topics - 3D Models</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
 
     <div id="header">
@@ -31,10 +31,10 @@
 
         <div id="main">
 
-            <h2><u>Template</u></h2>
+            <h2><u>3D Models</u></h2>
 
-            <p>This is a template page</p>
-            <img width=500px height=auto src="../img/soon.png" >
+            <p>Imagine being able to turn your flat drawings into 3D objects - yeah just extrude it.</p>
+            <img width=500px height=auto src="../img/models.PNG" >
            
             
             
@@ -45,9 +45,45 @@
 
         <div id="contents">
 
-            <h3 id="-ins-cool-beans-ins-"><ins><em>Cool Beans</em></ins></h3>
-            <p>So when I want to create a new page I can just copy-paste the code from this page :v</p>
+          <h3 id="-u-creating-models-with-fusion-360-u-"><u> Creating models with FUSION 360 </U></h3>
+            <p>Following up with previous topic on CAD, FUSION 360 can be used to turn sketches into models. There are 3 ways to do so:</p>
+            <ul>
+            <li><strong>Extrusion</strong><br>
+            -creating a 2D outline in one plane and then extruding or extending the outline of the object in the axis perpendicular to that plane.<br></li>
+            <li><strong>Revolution</strong><br>
+            -creating a 2D outline in one plane/shape and then revolving the outline/shape a number of degrees in the perpendicular plane. This method is ideal for creating cylindrical objects.<br></li>
+            <li><strong>Sculpting</strong><br>
+            -This method is akin to playing with plasticine. We start with a defined object e.g. block, cylinder, sphere and then by pushing and pulling surfaces we are able to create a 3D model of the object.<br></li>
+            </ul>
+            <p>In this page I document several models I made with FUSION 360.</p>
 
+            <div id="nametag">
+              <h3 id="nametag-br-">Nametag<br></h3>
+              <h3 id="nametag-br-">Nametag<br></h3>
+              <p>Specifications:</p>
+              <ul>
+              <li>The nametag should not exceed 30mm X 70mm.</li>
+              <li>The key ring hole must have a diameter of at least 2.5 mm with neck width of at least 3.5 mm for strength<br></li>
+              <li>Do not make the keytag thicker than 4 mm</li>
+              </ul>
+              <p><img width=500px height=auto class="center" src="../img/nametag1.jpg" ></p>
+              <p>I first start by drawing the nametag with the sketch function.</p>
+              <p><img width=500px height=auto class="center" src="../img/nametag (1).png" ></p>
+              <p>I created the sketch on the X-Y plane as I want it to be lying flat.</p>
+              <p>After that I start the extrusion. I first extrude the center piece by 2mm.</p>
+              <p><img width=500px height=auto class="center" src="../img/nametag (2).png" ></p>
+              <p>I next extrude the outer shell and the ring by 4mm.<br>
+              (You can also extrude the whole body then use shell instead of extruding 2 separate areas: all you need to do is select the area and the thickness of the sides.)</p>
+              <p><img width=500px height=auto class="center" src="../img/nametag (3).png" ></p>
+              <p>Lastly I extrude the text.<br>
+              Extrude function allows you to either join objects or cut the object. Here I extruded the text by 3mm joined.</p>
+              <p><img width=500px height=auto class="center" src="../img/nametag (4).png" ></p>
+              <p>I then use fillet to round the edges of the ring hole and the body to remove sharp edges.</p>
+              <p><img width=500px height=auto class="center" src="../img/nametag (5).png" ></p>
+              <p>And heres the final model:</p>
+              <iframe src="https://ichat1316.autodesk360.com/shares/public/SH919a0QTf3c32634dcf1bf4af047cdf24a5?mode=embed" width="640" height="480"  class="center" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            </div>
+              
 
         </div>
 

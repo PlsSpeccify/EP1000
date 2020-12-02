@@ -10,7 +10,18 @@ body {
     
 }
 
-
+#pagenav{
+    
+    background-color: #D3D3D3;
+    float: left;
+    border-radius: 5px;
+    padding: 5px;
+    width: 150px;
+    position: fixed;
+    border-style: solid;
+    border-color: gray;
+    margin: 5px;
+}
 
 .button {
     color: black !important;

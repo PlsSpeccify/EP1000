@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<Head>
+    <title> Projects- plant watering</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+
+</Head>
+
+
+
+<body>
+
+    
+
+    <div id="header">
+            
+        <h1>『EP1000 DIGI FABLAB』</h1>
+
+        <nav>
+            <ul class="navlink">
+                <li><a href="../index.html" >|Home|</a></li>
+                <li><a href="../docs/topics.html" >|Topics|</a></li>
+                <li><a href="project.html" >|Projects|</a></li>
+              </ul>
+        </nav>
+
+        
+
+    </div>
+
+    <div id="pagenav">
+        <h3>Section navigation</h3>
+        <ul>
+            <li><a href="#idea">Project idea</li></a>
+            <li><a href="#research">Research</li></a>
+            <li><a href="#sketch">Design Sketch</li></a>
+        </ul>
+    </div>
+
+    <div id="container">
+
+        
+
+        <div id="main">
+
+            <h2><u>Automated plant watering system</u></h2>
+            
+
+        </div>
+        
+        <div id="contents">
+
+            <div id="idea">
+                <h3><u>Project idea</h3></u>
+                <p>Recently National Parks Board distributed free seed packets to households, however most are so busy with work they end up forgetting to take care of the plants, mainly forgetting to water them. (At least that is a problem my parents face when attempting to grow vegetative plants).</p>
+                <p> With that I was thinking how it would be nice to have some machine that could automatically water the plants for you, so all you need to do is to remember to refill the water container.</p>
+
+                <h4><u>Design brief</u> <br></h4>
+                <p><strong>Project title:</strong> Automatic potted plant watering system</p>
+                <p><strong>Function: </strong> Dispenses water into potted plant when soil is dry.</p>
+               
+
+                <p>I created a Gantt chart to help manage and track the progress of my project. Given 4 weeks with 8 hours per week here is the rough plan I came up with:</p>
+                <img width=1000px height=auto class="center" src="../img/gantt.PNG" >
+
+            </div>
+
+            <div id="research">
+                <h3 id="-u-research-u-"><u> Research</u></h3>
+                <p>I did some research on existing projects and took their designs into considerations to implement them into my design.</p>
+                <ul>
+                <li><strong><a href="https://www.instructables.com/Arduino-Automatic-Watering-System/" target="none">Arduino Automatic Watering System from Instructables</strong><br></a>
+                    <img width=300px height=auto src="../img/arduinowaterinstructable.jpg" ><br>
+                -This project from Instructables shares a very similar design of a self watering system. It uses an arduino to detect moisture levels in soil using a soil hygrometer and turns on a DC motor pump to dispense water when low moisture is detected.</li>
+                </ul>
+
+                <ul>
+                    <li><strong><a href="https://www.instructables.com/Self-Watering-Plant/" target="none">Self-Watering Plant from Instructables</strong><br></a><img width=300px height=auto src="../img/selfwateringarduino.jpg" ><br><br>This design uses long bolts as water sensors and a relay to control a nom-submersible pump, controlled by an Arduino as well.</li>
+                </ul>
+                    
+
+
+
+                <ul>
+                <li><strong><a href="https://www.instructables.com/CNC-Arduino-Plant-Growing-Machine/" target="none">CNC Arduino Plant Growing Machine from Instructables</strong><br></a>
+                    <img width=300px height=auto src="../img/cncplant.jpg" ><br>
+                This project is more complex and uses an addition of stepper motors to water multiple plant containers, it also has grow lights built into it to help cultivate the plants faster. </li>
+                </ul>
+
+                <p>With that here are some ideas I would want to implement into my design:</p>
+                <p><strong>Design specifications:</strong></p>
+                <ul>
+                <li>Detects dry soil in plant pot and dispenses water automatically until moist.</li>
+                <li>Waters multiple plant pots (at most 3).</li>
+                <li>Compact and not take up too much space to be able to be kept indoors</li>
+                </ul>
+
+            </div>
+
+            <div id="sketch">
+
+                <h3 id="-u-design-sketches-u-"><u>Design Sketches</u></h3>
+                <figure class="center">
+                    <img src="../img/sketch_initial.jpeg" width=900px height=auto >
+                    <figcaption>Initial idea sketch</figcaption>
+                  </figure>
+                  <p>The idea is to have hygrometers probed into the soil in the flower pots, which is connected to an Arduino. When it detects low moisture, it turns on a DC motor pump which dispenses water into the pot until it detects a certain level of moisture.</p>
+                  <p>Initially I wanted to have the water reservoir inside the compartment with the electronics below it, but in the end I went with using a 500ml pet bottle placed outside to hold the water.</p>
+                  <p> The height of the hexagonal-shaped tower housing the electronics will be designed to be less or equal to the height of a 500ml pet bottle (approx 20cm). For the base size, I will need to consider the base area of 3 flower pots, the pet bottle and the electronics housing.</p>
+                  <p>I also came up with 2 methods of delivering water to multiple pots:</p>
+                  <img src="../img/sketch_initial_water.jpeg" width=600px height=auto class="center">
+                  <ol>
+                  <li><p>Have a stepper motor control a tube connected to the motor pump, where it will rotate to a specific angle to dispense water into a tray with multiple compartments leading to the plant pots.<br><br><u>Pros and cons:</u><br>
+                  +Only 1 motor pump and 1 stepper motor needed: compact.<br>
+                  -Might be a challenge to program the stepper motor to direct water into the pots</p>
+                  </li>
+                  <li><p>Each potted plant has their own motor pump, so 3 plant pots will require 3 motor pumps.
+                  <br><br><u>Pros and cons:</u><br>
+                  +Easy to program.<br>
+                  -Multiple motors required: more parts needed and will be bulky.</p>
+                  </li>
+                  </ol>
+                  <p>As compactness is more favorable, I decided to work on method 1: using stepper motors.</p>
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+        <div id="footer">
+            Copyright &copy; Me (T_T), all rights reserved ~
+        </div>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+    <script>
+        mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+    </script>
+
+
+    </div>
+
+
+</body>
+
+
+
+</html>

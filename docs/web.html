@@ -96,6 +96,42 @@
             <img width=400px height=auto src="../img/starteg.PNG" ><br>
             <img width=400px height=auto src="../img/startegout.PNG" >
 
+            
+
+            <h3 id="-u-pages-and-navigation-u-"><u>Pages and Navigation</u></h3>
+            <p>We want to create multiple subpages in our website to organise the content displayed.</p>
+            <p>Firstly is organising the html files into its subpages. We also want to seperate the html and css files from images and documents.<br></p>
+            <p><img width=300px height=auto src="../img/nav1.PNG" ></p>
+            <p>Here I placed the main page and .css file in the main folder. Then I create docs file for the Topics page and prj for the Project page. Lastly all images goes into the img file.</p>
+            <p>Here is a diagram to what the root looks like:
+            <br>
+            <img width=400px height=auto src="../img/nav2.jpg" ></p>
+            <p>To link the main page to the other subpages we will use <code>&lt;nav&gt;</code>.</p>
+            <p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"> <span style="color: #007700">&lt;nav&gt;</span>
+                        <span style="color: #007700">&lt;ul</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;navlink&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;index.html&quot;</span> <span style="color: #007700">&gt;</span>|Home|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+                            <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;docs/topics.html&quot;</span> <span style="color: #007700">&gt;</span>|Topics|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+                            <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;prj/project.html&quot;</span> <span style="color: #007700">&gt;</span>|Projects|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+                          <span style="color: #007700">&lt;/ul&gt;</span>
+                    <span style="color: #007700">&lt;/nav&gt;</span>
+            </pre></div></p>
+            <p>We need to specify where the html document is located. if the document is in the same folder we can just state the document name.</p>
+            <p>However if it is in a subfolder, we must first type the folder name, then the document name:<br></p>
+            <blockquote>
+            <p><code>docs/topics.html</code><br></p>
+            </blockquote>
+            <p>This tells us &quot;topics.html&quot; is located in the folder name &quot;docs&quot;.</p>
+            <p>But now we want to link &quot;topics.html&quot; back to index. To go back we use &#39;..&#39;:<br></p>
+            <p>Hence in &quot;topics.html&quot; our <code>&lt;nav&gt;</code> will look like this:</p>
+            <p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;nav&gt;</span>
+                      <span style="color: #007700">&lt;ul</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;navlink&quot;</span><span style="color: #007700">&gt;</span>
+                          <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;../index.html&quot;</span> <span style="color: #007700">&gt;</span>|Home|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+                          <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;topics.html&quot;</span> <span style="color: #007700">&gt;</span>|Topics|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+                          <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;../prj/project.html&quot;</span> <span style="color: #007700">&gt;</span>|Projects|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span style="color: #007700">&lt;/ul&gt;</span>
+                  <span style="color: #007700">&lt;/nav&gt;</span>
+            </pre></div></p>
+
             <p>From here we are mostly done with learning how to add content to our website.</p>
             <p>Useful links to know more about html and other functions:</p>
             <ul>
@@ -143,8 +179,6 @@
             <p>Will look like this:</p>
             <img width=70% height=auto src="../img/htmlonly.PNG" >
 
-
-
              <h3><u>Fancy CSS</u></h3>
              <p><small>CSS is the MSG for your website....~</small></p>
 
@@ -173,39 +207,7 @@
                 </ul>
                 <p>And so after hours of experimenting with CSS, I ended up with the page design you see before you. During those trial and errors there will surely be that one moment your entire page breaks and you don&#39;t know why so you end up doing a rollback on your code.<br>Up next is how I manage this with Version controlling (with github).</p>
 
-                <h3 id="-u-pages-and-navigation-u-"><u>Pages and Navigation</u></h3>
-<p>We want to create multiple subpages in our website to organise the content displayed.</p>
-<p>Firstly is organising the html files into its subpages. We also want to seperate the html and css files from images and documents.<br></p>
-<p><img width=300px height=auto src="../img/nav1.PNG" ></p>
-<p>Here I placed the main page and .css file in the main folder. Then I create docs file for the Topics page and prj for the Project page. Lastly all images goes into the img file.</p>
-<p>Here is a diagram to what the root looks like:
-<br>
-<img width=400px height=auto src="../img/nav2.jpg" ></p>
-<p>To link the main page to the other subpages we will use <code>&lt;nav&gt;</code>.</p>
-<p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"> <span style="color: #007700">&lt;nav&gt;</span>
-            <span style="color: #007700">&lt;ul</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;navlink&quot;</span><span style="color: #007700">&gt;</span>
-                <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;index.html&quot;</span> <span style="color: #007700">&gt;</span>|Home|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-                <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;docs/topics.html&quot;</span> <span style="color: #007700">&gt;</span>|Topics|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-                <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;prj/project.html&quot;</span> <span style="color: #007700">&gt;</span>|Projects|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-              <span style="color: #007700">&lt;/ul&gt;</span>
-        <span style="color: #007700">&lt;/nav&gt;</span>
-</pre></div></p>
-<p>We need to specify where the html document is located. if the document is in the same folder we can just state the document name.</p>
-<p>However if it is in a subfolder, we must first type the folder name, then the document name:<br></p>
-<blockquote>
-<p><code>docs/topics.html</code><br></p>
-</blockquote>
-<p>This tells us &quot;topics.html&quot; is located in the folder name &quot;docs&quot;.</p>
-<p>But now we want to link &quot;topics.html&quot; back to index. To go back we use &#39;..&#39;:<br></p>
-<p>Hence in &quot;topics.html&quot; our <code>&lt;nav&gt;</code> will look like this:</p>
-<p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;nav&gt;</span>
-          <span style="color: #007700">&lt;ul</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;navlink&quot;</span><span style="color: #007700">&gt;</span>
-              <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;../index.html&quot;</span> <span style="color: #007700">&gt;</span>|Home|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-              <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;topics.html&quot;</span> <span style="color: #007700">&gt;</span>|Topics|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-              <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;../prj/project.html&quot;</span> <span style="color: #007700">&gt;</span>|Projects|<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-            <span style="color: #007700">&lt;/ul&gt;</span>
-      <span style="color: #007700">&lt;/nav&gt;</span>
-</pre></div></p>
+               
 
                 
 

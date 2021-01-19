@@ -34,7 +34,7 @@
       </ul>
       </li>
       <li><a href="#arduino"> Arduino</a><ul>
-      <li><a href="#"> Blink LED</a></li>
+      <li><a href="#blink"> Blink LED</a></li>
       <li><a href="#"> Analog</a></li>
       </ul>
       </li>
@@ -146,6 +146,103 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
 
                 <div id="arduino">
                   <h4><ins><em>Programming with Arduino</em></ins></h4>
+
+
+                  <div id="blink">
+                    <h4><ins><em>Blinking LED</em></ins></h4>
+                    <p>In this project, we are to control 2 LEDs with a push button using an Arduino UNO.</p>
+                    <p>The LED&#39;s should turn on in this sequence:<br></p>
+<ul>
+<li>Initially, LEDs are all in the OFF state.</li>
+<li>Pressing the switch, turns on only the RED LED.</li>
+<li>Pressing the switch again, turns on only the GREEN LED</li>
+<li>Pressing the switch again, turns on all LEDs</li>
+<li>Pressing the switch again, turns off all LEDs returning to the first state.</li>
+</ul>
+<p>First of all I design the circuit on ThinkerCAD:</p>
+<img width=600px height=auto src="../img/blinkled.PNG" >
+
+<p>I can also write and test programs with ThinkerCAD before implementing on an actual one.</p>
+<img width=600px height=auto src="../img/blinkprogram.PNG" >
+
+<p> Here is the code I used:</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">const</span> <span style="color: #333399; font-weight: bold">int</span> LED <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">9</span>;
+  <span style="color: #008800; font-weight: bold">const</span> <span style="color: #333399; font-weight: bold">int</span> LED2 <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">10</span>;
+  <span style="color: #008800; font-weight: bold">const</span> <span style="color: #333399; font-weight: bold">int</span> SW <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">4</span>;
+  
+  <span style="color: #333399; font-weight: bold">int</span> LEDState;
+  <span style="color: #333399; font-weight: bold">int</span> LED2State;
+  <span style="color: #333399; font-weight: bold">int</span> lastSWstate;
+  <span style="color: #333399; font-weight: bold">int</span> count <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+  
+  <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">setup</span>(){
+    pinMode(LED, OUTPUT);
+    pinMode(LED2, OUTPUT);
+    pinMode(SW, INPUT);
+    LEDState <span style="color: #333333">=</span> LOW;
+    LED2State <span style="color: #333333">=</span> LOW;
+    lastSWstate <span style="color: #333333">=</span> HIGH; 
+  }
+  
+  <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">loop</span>(){
+    <span style="color: #333399; font-weight: bold">int</span> reading <span style="color: #333333">=</span> digitalRead(SW);
+    <span style="color: #008800; font-weight: bold">if</span> (reading <span style="color: #333333">==</span> LOW){
+      <span style="color: #008800; font-weight: bold">if</span> (lastSWstate <span style="color: #333333">==</span> HIGH){ <span style="color: #888888">//if button press</span>
+        count<span style="color: #333333">++</span>;
+        lastSWstate <span style="color: #333333">=</span> LOW;
+    }
+    }
+    <span style="color: #008800; font-weight: bold">else</span> lastSWstate <span style="color: #333333">=</span> HIGH;
+    
+    
+    <span style="color: #008800; font-weight: bold">if</span> (count <span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>){
+      LED2State <span style="color: #333333">=</span> LOW;
+      LEDState <span style="color: #333333">=</span> LOW;
+    digitalWrite(LED, LEDState);
+      digitalWrite(LED2, LED2State);
+    }
+    <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span> (count <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">1</span>){
+      LED2State <span style="color: #333333">=</span> LOW;
+      LEDState <span style="color: #333333">=</span> HIGH;
+      digitalWrite(LED, LEDState);
+      digitalWrite(LED2, LED2State);
+    }
+    <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span> (count <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">2</span>){
+      LED2State <span style="color: #333333">=</span> HIGH;
+      LEDState <span style="color: #333333">=</span> HIGH;
+    digitalWrite(LED, LEDState);
+      digitalWrite(LED2, LED2State);
+    }
+    <span style="color: #008800; font-weight: bold">else</span>{
+      count <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span> ;
+    }
+  
+  }
+  </pre></div>
+
+  <p><u><strong>Short Explanation</strong></u></p>
+<p>The way this program works is that it counts how many times the push button has been pressed:</p>
+<p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #333399; font-weight: bold">int</span> reading <span style="color: #333333">=</span> digitalRead(SW);
+  <span style="color: #008800; font-weight: bold">if</span> (reading <span style="color: #333333">==</span> LOW){
+    <span style="color: #008800; font-weight: bold">if</span> (lastSWstate <span style="color: #333333">==</span> HIGH){ <span style="color: #888888">//if button press</span>
+      count<span style="color: #333333">++</span>;
+      lastSWstate <span style="color: #333333">=</span> LOW;
+  }
+  }
+  <span style="color: #008800; font-weight: bold">else</span> lastSWstate <span style="color: #333333">=</span> HIGH;
+</pre></div></p>
+<p>This code counts the number of times the button has been pressed momentarily. When it detects the button being pressed, it increases &quot;count&quot; by 1, counting the number of times the button has been pressed.</p>
+<p>As the button is Active low, detecting when the state = 0 tells us the button has been pressed. </p>
+<img width=200px height=auto src="../img/active low.PNG" >
+<p>For this program I used If else statement to determine LED light states, &quot;Count = 1&quot; means the button has been pressed once, and so on. As we only have 3 states to consider (all Off, Red on &amp; Green off, Red off &amp; Green on, Both on), we only need up to &quot;if (count == 2)&quot;. Anything above will reset the counter to 0.</p>
+
+
+
+  
+
+
+
+                  </div>
 
 
 

@@ -15,12 +15,12 @@ body {
     background-color: #D3D3D3;
     float: left;
     border-radius: 5px;
-    padding: 5px;
-    width: 150px;
+    padding: 1px;
+    width: 170px;
     position: fixed;
     border-style: solid;
     border-color: gray;
-    margin: 5px;
+    margin: 1px;
 }
 
 .button {

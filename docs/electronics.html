@@ -162,10 +162,9 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
 <p> For the resistor values I used 200 ohm resistors connected to the LED and a 1k ohm resistor connected to the push button switch. The bush button is set up in active-high arrangement, meaning when the button is pressed a low signal (low voltage) will be sent to the pin input.</p>
 <p> Another important thing to note is the pin output (positive) is connected to the LED anode. There are multiple methods of identifying the anode and cathode of an LED, such as the longer leg usually indicates the anode, or looking at the LED body, the leg closer to the flat edge indicates the cathode. Another easier way is running a small voltage through the LED, the anode must be connected the the positive and the negative connected to the cathode. Connecting it in reverse may damage it!</p>
 
-<p>I can also write and test programs with ThinkerCAD before implementing on an actual one.</p>
+<p>Then I write, test and troubleshoot the program on the website.</p>
 <img width=500px height=auto src="../img/blinkprogram.PNG" >
-
-<p> Here is the code I used:</p>
+<p>Here is the final program:</p>
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">const</span> <span style="color: #333399; font-weight: bold">int</span> LED <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">9</span>;
   <span style="color: #008800; font-weight: bold">const</span> <span style="color: #333399; font-weight: bold">int</span> LED2 <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">10</span>;
   <span style="color: #008800; font-weight: bold">const</span> <span style="color: #333399; font-weight: bold">int</span> SW <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">4</span>;
@@ -228,11 +227,23 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
     <source src="https://i.imgur.com/1MVUmAo.mp4" type="video/mp4">
   Your browser does not support the video tag :(
   </video>
+                  </div>
 
-
-
+                  <div id="analog">
+                    <h3 id="-u-analog-inputs-u-"><u>Analog inputs</u></h3>
+                    <p>While digital signals are discrete and changes in specific steps (High and Low), analog signals can vary continuously.</p>
+                    <p>Arduino UNO has 6 analog pins A0-A5, which are used when interfacing analog input devices such as potentiometers, LDR (Light dependent resistors) and other sensors.<br>
+                       It uses an ADC (Analog to Digital Convertor) to convert an input voltage into a number, requiring a reference voltage and a n-bit ADC.</p>
+                    <p>As Arduino does not have a built in DAC (Digital to Analog Convertor), we will use PWM (pulse width modulation) to vary the output voltage.<br> It works by modulating the width of the pulse of a square wave, changing its average voltage. A square wave thats high 50% of the time will have a 50% duty cycle PWM, while a continuous high output will be a 100% duty cycle.</p>
+                    <img width=430px height=auto src="https://i.imgur.com/WUKo2gi.png" >
+                    <p>The Arduino has 6 PWM ports, which has a &quot;~&quot; at the end of each number (3, 5, 6, 9, 10, 11)</p>
 
                   </div>
+
+
+
+
+
 
 
 

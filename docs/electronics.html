@@ -238,6 +238,39 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
                     <img width=430px height=auto src="https://i.imgur.com/WUKo2gi.png" >
                     <p>The Arduino has 6 PWM ports, which has a &quot;~&quot; at the end of each number (3, 5, 6, 9, 10, 11)</p>
 
+                    <p><u>Potentiometer and LED</u><br>
+                      The potentiometer controls the brightness of the LED.</p>
+                      <p>I start by designing and programming the circuit on ThinkerCAD.</p>
+                      <img width=430px height=auto src="https://i.imgur.com/pkhIT2V.png" >
+                      <p>Code:</p>
+                      <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">setup</span>()
+{
+  Serial.begin(<span style="color: #0000DD; font-weight: bold">9600</span>);
+  Serial.println(<span style="background-color: #fff0f0">&quot;ready&quot;</span>);
+}
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">loop</span>()
+{
+  <span style="color: #333399; font-weight: bold">int</span> reading <span style="color: #333333">=</span> analogRead(A2);
+  Serial.print(<span style="background-color: #fff0f0">&quot;Reading = &quot;</span>);
+  Serial.println(reading);
+  delay(<span style="color: #0000DD; font-weight: bold">500</span>);
+  
+  <span style="color: #333399; font-weight: bold">int</span> digValue <span style="color: #333333">=</span> map(reading, <span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">1023</span>, <span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">255</span>);
+  analogWrite(<span style="color: #0000DD; font-weight: bold">9</span>, digValue);
+  Serial.print(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t</span><span style="background-color: #fff0f0">&quot;</span>);
+  Serial.println(digValue);
+  delay(<span style="color: #0000DD; font-weight: bold">500</span>);
+  
+}
+</pre></div>
+
+                      <p>After which I implement on the physical breadboard.</p>
+                      <p>[image] </p>
+                      <p>You can see the change in output from the serial monitor:</p>
+                      <p>[video]</p>
+                      
+
                   </div>
 
 

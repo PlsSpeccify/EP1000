@@ -35,7 +35,7 @@
       </li>
       <li><a href="#arduino"> Arduino</a><ul>
       <li><small><a href="#blink"> Blink LED</a></li></small>
-      <li><small><a href="#"> Analog</a></li></small>
+      <li><small><a href="#analog"> Analog</a></li></small>
       </ul>
       </li>
     </ul>
@@ -242,6 +242,7 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
                       The potentiometer controls the brightness of the LED.</p>
                       <p>I start by designing and programming the circuit on ThinkerCAD.</p>
                       <img width=430px height=auto src="https://i.imgur.com/pkhIT2V.png" >
+                      <p>With the oscilloscope connected to the output you can view the PWM signal.</p>
                       <p>Code:</p>
                       <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">setup</span>()
 {
@@ -266,9 +267,16 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
 </pre></div>
 
                       <p>After which I implement on the physical breadboard.</p>
-                      <p>[image] </p>
+                      <img width=450px height=auto src="https://i.imgur.com/uqh22xR.jpeg" > 
+                      <video width="600" height="auto" controls >
+                      <source src="https://i.imgur.com/s7cXTip.mp4" type="video/mp4">
+                      Your browser does not support the video tag :(
+                      </video>
                       <p>You can see the change in output from the serial monitor:</p>
-                      <p>[video]</p>
+                      <video width="600" height="auto" controls class="center">
+                        <source src="https://i.imgur.com/f88zMpt.mp4" type="video/mp4">
+                        Your browser does not support the video tag :(
+                        </video>
                       
 
                   </div>

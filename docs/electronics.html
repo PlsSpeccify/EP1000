@@ -159,6 +159,8 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
 </ul>
 <p>First of all I design the circuit on ThinkerCAD:</p>
 <img width=500px height=auto src="../img/blinkled.PNG" >
+<p> For the resistor values I used 200 ohm resistors connected to the LED and a 1k ohm resistor connected to the push button switch. The bush button is set up in active-high arrangement, meaning when the button is pressed a low signal (low voltage) will be sent to the pin input.</p>
+<p> Another important thing to note is the pin output (positive) is connected to the LED anode. There are multiple methods of identifying the anode and cathode of an LED, such as the longer leg usually indicates the anode, or looking at the LED body, the leg closer to the flat edge indicates the cathode. Another easier way is running a small voltage through the LED, the anode must be connected the the positive and the negative connected to the cathode. Connecting it in reverse may damage it!</p>
 
 <p>I can also write and test programs with ThinkerCAD before implementing on an actual one.</p>
 <img width=500px height=auto src="../img/blinkprogram.PNG" >
@@ -217,6 +219,7 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
   
   }
   </pre></div>
+  <p> Note that I changed the pin numbers on the actual board compared to the ThinkerCAD simulator for a more neater circuit layout on the breadboard.</p>
   <p> The program works by counting the number of times the button has been pressed, where for the number of times counted will toggle the state of the LEDs using if-else statements.</p>
   <p> After testing on ThinkerCAD I recreate the circuit physically and upload the program on the arduino UNO.
   </p>

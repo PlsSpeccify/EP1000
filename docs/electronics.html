@@ -139,7 +139,7 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
 
                 <div id="arduino">
                   <h3><ins><em>Arduino Programming</em></ins></h3>
-                  <p> <a href="https://www.arduino.cc/"> Arduino</a> is an open-source electronics platform based on easy-to-use hardware and software. Its affordability and easy to use system makes it ideal when implementing embedded systems into projects.</p>
+                  <p> <a href="https://www.arduino.cc/" target="none"> Arduino</a> is an open-source electronics platform based on easy-to-use hardware and software. Its affordability and easy to use system makes it ideal when implementing embedded systems into projects.</p>
                   <p>For the embedded programming assignments, we use an Arduino Uno to interface several I/O (Input and output) devices.</p>
 
 
@@ -168,9 +168,6 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">const</span> <span style="color: #333399; font-weight: bold">int</span> LED <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">9</span>;
   <span style="color: #008800; font-weight: bold">const</span> <span style="color: #333399; font-weight: bold">int</span> LED2 <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">10</span>;
   <span style="color: #008800; font-weight: bold">const</span> <span style="color: #333399; font-weight: bold">int</span> SW <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">4</span>;
-  
-  <span style="color: #333399; font-weight: bold">int</span> LEDState;
-  <span style="color: #333399; font-weight: bold">int</span> LED2State;
   <span style="color: #333399; font-weight: bold">int</span> lastSWstate;
   <span style="color: #333399; font-weight: bold">int</span> count <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>;
   
@@ -178,11 +175,8 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
     pinMode(LED, OUTPUT);
     pinMode(LED2, OUTPUT);
     pinMode(SW, INPUT);
-    LEDState <span style="color: #333333">=</span> LOW;
-    LED2State <span style="color: #333333">=</span> LOW;
     lastSWstate <span style="color: #333333">=</span> HIGH; 
   }
-  
   <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">loop</span>(){
     <span style="color: #333399; font-weight: bold">int</span> reading <span style="color: #333333">=</span> digitalRead(SW);
     <span style="color: #008800; font-weight: bold">if</span> (reading <span style="color: #333333">==</span> LOW){
@@ -193,31 +187,28 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
     }
     <span style="color: #008800; font-weight: bold">else</span> lastSWstate <span style="color: #333333">=</span> HIGH;
     
-    
     <span style="color: #008800; font-weight: bold">if</span> (count <span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>){
-      LED2State <span style="color: #333333">=</span> LOW;
-      LEDState <span style="color: #333333">=</span> LOW;
-    digitalWrite(LED, LEDState);
-      digitalWrite(LED2, LED2State);
+    digitalWrite(LED, LOW);
+      digitalWrite(LED2, LOW);
     }
     <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span> (count <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">1</span>){
-      LED2State <span style="color: #333333">=</span> LOW;
-      LEDState <span style="color: #333333">=</span> HIGH;
-      digitalWrite(LED, LEDState);
-      digitalWrite(LED2, LED2State);
+      digitalWrite(LED, HIGH);
+      digitalWrite(LED2, LOW);
     }
     <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span> (count <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">2</span>){
-      LED2State <span style="color: #333333">=</span> HIGH;
-      LEDState <span style="color: #333333">=</span> HIGH;
-    digitalWrite(LED, LEDState);
-      digitalWrite(LED2, LED2State);
+    digitalWrite(LED, LOW);
+      digitalWrite(LED2, HIGH);
+    }
+     <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span> (count <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">3</span>){
+    digitalWrite(LED, HIGH);
+      digitalWrite(LED2, HIGH);
     }
     <span style="color: #008800; font-weight: bold">else</span>{
       count <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span> ;
     }
-  
   }
-  </pre></div>
+</pre></div>
+
   <p> Note that I changed the pin numbers on the actual board compared to the ThinkerCAD simulator for a more neater circuit layout on the breadboard.</p>
   <p> The program works by counting the number of times the button has been pressed, where for the number of times counted will toggle the state of the LEDs using if-else statements.</p>
   <p> After testing on ThinkerCAD I recreate the circuit physically and upload the program on the arduino UNO.
@@ -277,15 +268,28 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
                         <source src="https://i.imgur.com/f88zMpt.mp4" type="video/mp4">
                         Your browser does not support the video tag :(
                         </video>
-                      
-
                   </div>
 
-
-
-
-
-
+                  <h4 id="-u-analog-output-rgb-led-u-"><u>Analog output + RGB LED</u></h4>
+                  <p><a href="http://bit.ly/3iyn5aO" target="none">The circuit design I used.</a></p>
+                  <ul>
+                  <li>With LDR (Light Dependent Resistor)<br></li>
+                </ul>
+                <p>The LDR resistance changes with the light intensity that falls on it. The program causes the RGB LED to change colour as light intensity detected by the LDR changes.</p>
+                <img width=450px height=auto src="https://i.imgur.com/lx6vb6u.jpg" > 
+                      <video width="600" height="auto" controls >
+                      <source src="https://i.imgur.com/3p36bxF.mp4" type="video/mp4">
+                      Your browser does not support the video tag :(
+                      </video>
+                <ul>
+                  <li>With Potentiometer<br></li>
+                </ul>
+                <p>Using the same program, I swapped the LDR with a potentiometer, so you can control the colour of the LED by turning the knob.</p>
+                <img width=450px height=auto src="https://i.imgur.com/GFDX6LL.jpg" > 
+                      <video width="600" height="auto" controls >
+                      <source src="https://i.imgur.com/piybTSo.mp4" type="video/mp4">
+                      Your browser does not support the video tag :(
+                      </video>
 
 
                 </div>
@@ -294,9 +298,6 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
 
 
 
-
-              
-            
     
             </div>
 

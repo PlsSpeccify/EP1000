@@ -35,6 +35,7 @@
             <li><a href="#idea">Project idea</li></a>
             <li><a href="#research">Research</li></a>
             <li><a href="#sketch">Design Sketch</li></a>
+            <li><a href="#fabrication">Fabrication</li></a>
         </ul>
     </div>
 
@@ -52,87 +53,85 @@
         <div id="contents">
 
             <div id="idea">
-                <h3><u>Project idea</h3></u>
+                <h3 id="-u-project-idea-u-"><u>Project idea</u></h3>
                 <p>Recently National Parks Board distributed free seed packets to households, however most are so busy with work they end up forgetting to take care of the plants, mainly forgetting to water them. (At least that is a problem my parents face when attempting to grow vegetative plants).</p>
-                <p> With that I was thinking how it would be nice to have some machine that could automatically water the plants for you, so all you need to do is to remember to refill the water container.</p>
-
-                <h4><u>Design brief</u> <br></h4>
+                <p>With that I was thinking how it would be nice to have a machine that could automatically water the plants for you, so all you need to do is to remember to refill the water container.</p>
+                <h4 id="-u-design-brief-u-"><u>Design brief</u></h4>
                 <p><strong>Project title:</strong> Automatic potted plant watering system</p>
-                <p><strong>Function: </strong> Dispenses water into potted plant when soil is dry.</p>
-               
-
-                <p>I created a Gantt chart to help manage and track the progress of my project. Given 4 weeks with 8 hours per week here is the rough plan I came up with:</p>
+                <p><strong>Function:</strong> Manages and dispenses water to multiple plant pots.</p>
+                <p>With my project idea finalized I created a Gantt chart to help manage and track the progress of my project. Given 4 weeks with 8 hours per week here is the rough plan I came up with:</p>
+                
                 <img width=1000px height=auto class="center" src="../img/gantt.PNG" >
 
             </div>
 
             <div id="research">
                 <h3 id="-u-research-u-"><u> Research</u></h3>
-                <p>I did some research on existing projects and took their designs into considerations to implement them into my design.</p>
+                <p>I did some research on existing projects and noted some features I can borrow to implement in my own project.</p>
                 <ul>
                 <li><strong><a href="https://www.instructables.com/Arduino-Automatic-Watering-System/" target="none">Arduino Automatic Watering System from Instructables</strong><br></a>
                     <img width=300px height=auto src="../img/arduinowaterinstructable.jpg" ><br>
-                -This project from Instructables shares a very similar design of a self watering system. It uses an arduino to detect moisture levels in soil using a soil hygrometer and turns on a DC motor pump to dispense water when low moisture is detected.</li>
+                </li>
+                Here a water sensor is used to detect if the moisture level in soil falls below a threshold, turning on a DC motor pump.
                 </ul>
-
+            <!---
                 <ul>
                     <li><strong><a href="https://www.instructables.com/Self-Watering-Plant/" target="none">Self-Watering Plant from Instructables</strong><br></a><img width=300px height=auto src="../img/selfwateringarduino.jpg" ><br><br>This design uses long bolts as water sensors and a relay to control a nom-submersible pump, controlled by an Arduino as well.</li>
                 </ul>
-                    
-
-
-
+            -->
                 <ul>
                 <li><strong><a href="https://www.instructables.com/CNC-Arduino-Plant-Growing-Machine/" target="none">CNC Arduino Plant Growing Machine from Instructables</strong><br></a>
                     <img width=300px height=auto src="../img/cncplant.jpg" ><br>
                 This project is more complex and uses an addition of stepper motors to water multiple plant containers, it also has grow lights built into it to help cultivate the plants faster. </li>
                 </ul>
-
-                <ul>
+                <!--<ul>
                     <li><strong><a href="https://www.electronicsforu.com/electronics-projects/hardware-diy/automatic-plant-watering-system" target="none">Automated Plant Watering System</strong><br></a>
                         <img width=300px height=auto src="https://www.electronicsforu.com/wp-contents/uploads/2016/03/645_Fig_1.jpg" ><br>
                     This design makes use of a servo, attaching a pipe on its horn to direct water to the plants.</li>
-                </ul>
+                </ul>*/-->
 
-
-
-                <p>With that here are some ideas I would want to implement into my design:</p>
-                <p><strong>Design specifications:</strong></p>
+                <p>Going through multiple watering systems people have done, I decided the functions I want to implement into my design:</p>
                 <ul>
-                <li>Detects dry soil in plant pot and dispenses water automatically until moist.</li>
-                <li>Waters multiple plant pots (at most 3).</li>
-                <li>Compact and not take up too much space to be able to be kept indoors</li>
+                <li><p>Have a water sensor detect soil dryness and control a DC motor water pump, this is the basics of an automated watering system.<br><img src="../img/sketch1.jpeg" width=500px height=auto ></p>
+                </li>
+                <li><p>As I want a single system to be able to manage multiple pots, I came up with a mechanism where the watering tube would be connected to a servo motor, where it will position to dispense water to the specific pot.<br><img src="../img/sketch_Water.jpeg" width=500px height=auto ></p>
+                    It basically works by positioning the tube (connected to the DC pump) to a spout which directs the water flow onto the plant pot.
+
+                </li>
                 </ul>
+
+
 
             </div>
 
             <div id="sketch">
 
-                <h3 id="-u-design-sketches-u-"><u>Design Sketches</u></h3>
+                <h3 id="-u-design-sketches-u-"><u>Design Sketch</u></h3>
                 <figure class="center">
-                    <img src="../img/sketch_initial.jpeg" width=700px height=auto >
-                    <figcaption><u><strong>Initial design sketch</u></strong></figcaption>
-                  </figure>
-                  <p>The idea is to have hygrometers probed into the soil in the flower pots, which is connected to an Arduino. When it detects low moisture, it turns on a DC motor pump which dispenses water into the pot until it detects a certain level of moisture.</p>
-                  <p>Initially I wanted to have the water reservoir inside the compartment with the electronics below it, but in the end I went with using a 500ml pet bottle placed outside to hold the water.</p>
-                  <p> The height of the hexagonal-shaped tower housing the electronics will be designed to be less or equal to the height of a 500ml pet bottle (approx 20cm). For the base size, I will need to consider the base area of 3 flower pots, the pet bottle and the electronics housing.</p>
-                  <p>I also came up with 2 methods of delivering water to multiple pots:</p>
-                  <img src="../img/sketch_initial_water.jpeg" width=600px height=auto class="center">
-                  <ol>
-                  <li><p>Have a stepper motor control a tube connected to the motor pump, where it will rotate to a specific angle to dispense water into a tray with multiple compartments leading to the plant pots.<br><br><u>Pros and cons:</u><br>
-                  +Only 1 motor pump and 1 stepper motor needed: compact.<br>
-                  -Might be a challenge to program the stepper motor to direct water into the pots</p>
-                  </li>
-                  <li><p>Each potted plant has their own motor pump, so 3 plant pots will require 3 motor pumps.
-                  <br><br><u>Pros and cons:</u><br>
-                  +Easy to program.<br>
-                  -Multiple motors required: more parts needed and will be bulky.</p>
-                  </li>
-                  </ol>
-                  <p>As compactness is more favorable, I decided to work on method 1: using stepper motors.</p>
-                  <p>* A motor that can control angle rotation would be needed: Servo motor / Stepper motor.</p>
+                    <img src="../img/soon.png" width=700px height=auto >
 
+                 
 
+            </div>
+
+            <div id="fabrication">
+                <h3 id="-u-design-sketches-u-"><u>Fabrication</u></h3>
+
+                <p><u><strong>Components needed:</strong></u><br>
+                    <small> All links direct to Shopee</small><br></p>
+                    <p><u>Electronics</u></p>
+                    <ul>
+                    <li>Servo Motor (positional) <em>x1</em></li>
+                    <li><a href="https://shopee.sg/Soil-Sensor-Soil-Hydrometer-i.272569241.4337791435">Arduino Hydrometer</a> <em>x3</em> <br></li>
+                    <li><a href="https://shopee.sg/New-DC-3V-5V-3.7V-Micro-370-Motor-Mini-Air-Pump-Vacuum-Pump-Self-Priming-Pump-i.98758982.3243388701">Double sided DC motor pump (non-submersible)</a> <em>x1</em></li>
+                    <li>Plastic tubing (for water pump)</li>
+                    </ul>
+                    <p><u>Others</u></p>
+                    <ul>
+                    <li>Plant pot <em>x3</em></li>
+                    <li>1.5L drink bottle <em>x1</em> <small> (pokka Ice lemon tea bottle why not)</small></li>
+                    </ul>
+                    
             </div>
 
 

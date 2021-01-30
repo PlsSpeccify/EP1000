@@ -152,14 +152,70 @@
                           </tr>
                       </table>
 
-                      <p>After several design sketches I finalise with this design sketch.
+                      <p>The design process was a back and forth from drawing to designing the model on FUSION 360. After multiple designs I finalise the design I like and think that would work:
                         <img src="../img/soon.png" width=700px height=auto class="center">
                       </p>
 
-                      <h4 id="-u-main-body-u-"><u> Main body</u></h4>
-                      <p>The main structure consist of 2 parts: Housing and the water channelling mechanism. </p>
-                      <p>The housing basically houses the electronics and the water channeling mechanism. It will be made out of plywood which a laser cutter will be used to fabricate.</p>
-                      <p><u>Designing</u></p>
+                      <p>The Plant Fountain structure consist of 2 parts: The tower and the water channelling mechanism. </p>
+
+                      <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'Tower')">Tower</button>
+                        <button class="tablinks" onclick="openCity(event, 'servo')">Water channelling</button>
+                      </div>
+
+                      <div id="Tower" class="tabcontent">
+                        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                        <h4 id="-u-the-tower-u-"><u> The tower</u></h4>
+                      <p>The tower basically houses the electronics and the water channeling mechanism.</p>
+
+                      <p>As it is box, shape, I started with the <a href="https://plsspeccify.github.io/EP1000/docs/lasercutbox.html">laser cut box</a> I previously designed.</p>
+                      <img src="../img/tower1.PNG" width=400px height=auto class="center">
+                    <p><u>Base</u><br>
+                      I first create a extension sketch for the base and join extrude the new profile. I also fillet the edges.</p>
+                      <p><img src="../img/tower2.PNG" width=400px height=auto class="center">
+                        <img src="../img/tower3.PNG" width=400px height=auto class="center"></p>
+                        <p><u>Water spout supports</u><br>
+                          I extrude cut a hole on 3 of the sides to the water spout width.</p>
+                          <img src="../img/tower4.PNG" width=400px height=auto class="center">
+                          <p>To create a floor for support, I cut tabs on the holes, created and extruded the floor as a new component and used the combine tool to cut the tabs.</p>
+                          <p><img src="../img/tower5.PNG" width=400px height=auto class="center">
+                            <img src="../img/tower6.PNG" width=400px height=auto class="center"></p>
+                            <p>I cut a &quot;T&quot; shape hole for wires to go up to the top floor.</p>
+                            <p><img src="../img/tower7.PNG" width=400px height=auto class="center"></p>
+                            <p>After that I decided to patch the hole to a smaller one so I can just slot in the spouts.</p>
+                            <p><img src="../img/tower8.PNG" width=400px height=auto class="center"></p>
+                            <p><u>Slide Door</U><br>
+                              Cutting a door at the back so I can access the electronics. I start by cutting a hole at the back panel.</p>
+                              <p><img src="../img/tower9.PNG" width=400px height=auto class="center"></p>
+                              <p>For the door to slide I have to add a guard. I cut tabs on the base, extrude a small guard and combine cut to create tabs on the guard. I also removed the tab on the side to create a slot for the door to slide out.</p>
+                              <p><img src="../img/tower10.PNG" width=400px height=auto class="center">
+                                <img src="../img/tower11.PNG" width=400px height=auto class="center">
+                                <img src="../img/tower12.PNG" width=400px height=auto class="center"></p>
+                                <p>I then extrude out the door and cut handle holes.</p>
+                                <p><img src="../img/tower13.PNG" width=400px height=auto class="center"></p>
+                                <p>I then cut 5mm holes for the wires.</p>
+                                <p><img src="../img/tower14.PNG" width=400px height=auto class="center"></p>
+
+                                <div class="row">
+                                  <div class="column">
+                                    <img src="../img/tower_front.PNG" width=400px height=auto >
+                                  </div>
+                                  <div class="column">
+                                    <img src="../img/tower_back.PNG" alt="bottom" width=400px height=auto>
+                                  </div>
+                                </div>
+
+
+                      </div>
+                      
+                      <div id="servo" class="tabcontent">
+                        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                      </div>
+
+
+                      
                       
 
             </div>
@@ -167,20 +223,7 @@
             <div id="fabrication">
                 <h3 id="-u-design-sketches-u-"><u>Fabrication</u></h3>
 
-                <p><u><strong>Components needed:</strong></u><br>
-                    <small> All links direct to Shopee</small><br></p>
-                    <p><u>Electronics</u></p>
-                    <ul>
-                    <li>Servo Motor (positional) <em>x1</em></li>
-                    <li><a href="https://shopee.sg/Soil-Sensor-Soil-Hydrometer-i.272569241.4337791435">Arduino Hydrometer</a> <em>x3</em> <br></li>
-                    <li><a href="https://shopee.sg/New-DC-3V-5V-3.7V-Micro-370-Motor-Mini-Air-Pump-Vacuum-Pump-Self-Priming-Pump-i.98758982.3243388701">Double sided DC motor pump (non-submersible)</a> <em>x1</em></li>
-                    <li>Plastic tubing (for water pump)</li>
-                    </ul>
-                    <p><u>Others</u></p>
-                    <ul>
-                    <li>Plant pot <em>x3</em></li>
-                    <li>1.5L drink bottle <em>x1</em> <small> (pokka Ice lemon tea bottle why not)</small></li>
-                    </ul>
+
                     
             </div>
 
@@ -217,6 +260,24 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
     </script>
 
 

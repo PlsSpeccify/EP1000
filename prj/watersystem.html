@@ -152,58 +152,46 @@
                           </tr>
                       </table>
 
-                      <p>The design process was a back and forth from drawing to designing the model on FUSION 360. After multiple designs I finalise the design I like and think that would work:
+                      <p>The design process was a back and forth from drawing to designing the model on FUSION 360. After multiple designs I finalised the design I prefer and think that would work.
                         <img src="../img/soon.png" width=700px height=auto class="center">
                       </p>
 
-                      <p>The Plant Fountain structure consist of 2 parts: The tower and the Servo support. </p>
+                      <p>In total the whole structure consist of 3 parts: The Tower (plywood), Servo support (acrylic) and the spouts (3D printed). I designed all of them in a single project so its easy to visualise how everything would fit together. View the tabs to see how each part is done: </p>
 
                       <div class="tab">
                         <button class="tablinks" onclick="openCity(event, 'Tower')">Tower</button>
                         <button class="tablinks" onclick="openCity(event, 'servo')">Servo support</button>
+                        <button class="tablinks" onclick="openCity(event, 'print')">Spouts</button>
                       </div>
 
                       <div id="Tower" class="tabcontent">
                         <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
                         <h4 id="-u-the-tower-u-"><u> The tower</u></h4>
-                      <p>The tower basically houses the electronics and the water channeling mechanism.</p>
+                        <p> The tower is the main structure of the plant fountain. It basically houses the electronics and mechanisms. For the Tower I decided to use plywood.</p>
 
-                      <p>As it is box, shape, I started with the <a href="https://plsspeccify.github.io/EP1000/docs/lasercutbox.html">laser cut box</a> I previously designed.</p>
-                      <img src="../img/tower1.PNG" width=400px height=auto class="center">
-                    <p><u>Base</u><br>
-                      I first create a extension sketch for the base and join extrude the new profile. I also fillet the edges.</p>
-                      <p><img src="../img/tower2.PNG" width=400px height=auto class="center">
-                        <img src="../img/tower3.PNG" width=400px height=auto class="center"></p>
-                        <p><u>Water spout supports</u><br>
-                          I extrude cut a hole on 3 of the sides to the water spout width.</p>
-                          <img src="../img/tower4.PNG" width=400px height=auto class="center">
-                          <p>To create a floor for support, I cut tabs on the holes, created and extruded the floor as a new component and used the combine tool to cut the tabs.</p>
-                          <p><img src="../img/tower5.PNG" width=400px height=auto class="center">
-                            <img src="../img/tower6.PNG" width=400px height=auto class="center"></p>
-                            <p>I cut a &quot;T&quot; shape hole for wires to go up to the top floor.</p>
-                            <p><img src="../img/tower7.PNG" width=400px height=auto class="center"></p>
-                            <p>After that I decided to patch the hole to a smaller one so I can just slot in the spouts.</p>
-                            <p><img src="../img/tower8.PNG" width=400px height=auto class="center"></p>
-                            <p><u>Slide Door</U><br>
-                              Cutting a door at the back so I can access the electronics. I start by cutting a hole at the back panel.</p>
-                              <p><img src="../img/tower9.PNG" width=400px height=auto class="center"></p>
-                              <p>For the door to slide I have to add a guard. I cut tabs on the base, extrude a small guard and combine cut to create tabs on the guard. I also removed the tab on the side to create a slot for the door to slide out.</p>
-                              <p><img src="../img/tower10.PNG" width=400px height=auto class="center">
-                                <img src="../img/tower11.PNG" width=400px height=auto class="center">
-                                <img src="../img/tower12.PNG" width=400px height=auto class="center"></p>
-                                <p>I then extrude out the door and cut handle holes.</p>
-                                <p><img src="../img/tower13.PNG" width=400px height=auto class="center"></p>
-                                <p>I then cut 5mm holes for the wires.</p>
-                                <p><img src="../img/tower14.PNG" width=400px height=auto class="center"></p>
-                                <p>For the cover I created a new component, created a new sketch with the top of the tower as the plane. I sketched the tabs and extruded downwards.</p>
-                                <p><img src="../img/towercover (1).png" width=400px height=auto class="center">
-                                  <img src="../img/towercover (2).png" width=400px height=auto class="center"></p>
-                                <p>Then I use combine cut to create tabs on the tower edges.</p>
-                                <img src="../img/towercover (3).png" width=400px height=auto class="center">
-                                <br>
-                                <img src="../img/tower_front.PNG" height=500px width=auto >
-                                <img src="../img/tower_back.PNG" height=500px width=auto >
-                                <a href="../Fusion 360/project/tower.f3d" class="center">Download tower.f3d</a>
+                        <p>For the foundation I start with the previously made <a href="https://plsspeccify.github.io/EP1000/docs/lasercutbox.html">Laser cut box</a>, from there I alter the parameters to the appropriate measurements.</p>
+                        <img width=400px height=auto src="https://i.imgur.com/AdhtYJS.png" >
+                        <p>First up the base: I created a new sketch for the base design extension and join extrude it. I also fillet the sharp edges.</p>
+                        <img width=400px height=auto src="https://i.imgur.com/deyrCHe.png" ><img width=400px height=auto src="https://i.imgur.com/NRu8gxV.png" >
+                        <p>To fit the spouts into the tower I cut out a square from the top to the measurements of the width of the spouts.</p>
+                        <img width=400px height=auto src="https://i.imgur.com/f7uiV1Q.png" >
+                        <p>And to support the spouts mid air I created another floor, extruding as a new component and using the combine cut function to create tabs on the walls.</p>
+                        <img width=400px height=auto src="https://i.imgur.com/Tlrvj2F.png" ><img width=400px height=auto src="https://i.imgur.com/X550QyS.png" >
+                        <p>I decided to create a sliding door near the base in order to access the electronics when the tower is fully constructed. I did this by first cutting a square hole to my desired measurements.</p>
+                        <img width=400px height=auto src="https://i.imgur.com/Fkl1Vu3.png" >
+                        <p>I need to make some guard to prevent the door from falling, so I more tabs next to the existing ones 3mm apart (assuming the wood thickness is 3mm). I then extrude a new component and use combine cut.</p>
+                        <img width=400px height=auto src="https://i.imgur.com/z9I9Pd0.png" ><img width=400px height=auto src="https://i.imgur.com/nAndBIp.png" >
+                        <p>I lastly extrude on the guard the actual door. I cut a slot in the door so I can slide it out. Its also a way to provide power to the electronics.</p>
+                        <img width=400px height=auto src="https://i.imgur.com/smDEXGS.png" >
+                        <p>Back to the middle floor, I cut a T-shape for wiring to pass through. I also decided to turn the large cuts for the spouts into a small square, that way I can slide the spout in.</p>
+                        <img width=400px height=auto src="https://i.imgur.com/ABEVuTb.png" ><img width=400px height=auto src="https://i.imgur.com/DuwagdS.png" >
+                        <p>I also cut some holes for the wires and tubing.</p>
+                        <img width=400px height=auto src="https://i.imgur.com/liOwHju.png" >
+                        <p>Lastly the cover, I sketched a square with tabs, extrude as a new component and use combine cut for the other sides.</p>
+                        <img width=400px height=auto src="https://i.imgur.com/tdHUq8L.png" ><img width=400px height=auto src="https://i.imgur.com/B8lGfBV.png" >
+                        <p>And the tower is complete!</p>
+
+
 
 
                      
@@ -213,31 +201,15 @@
                       
                       <div id="servo" class="tabcontent">
                         <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-                        <p>The Servo support mounts the servo and fixes the water spouts in place.</p>
-                        <p>I start with the box interior and the servo hole and extrude it.</p>
-                        <p><img src="../img/servo1.PNG" alt="bottom" width=400px height=auto class="center"></p>
-                        <p>Next cut out holes for the spouts and wires.</p>
-                        <p><img src="../img/servo2.PNG" alt="bottom" width=400px height=auto class="center"></p>
-                        <p>For the slots to secure the spouts in place, I cut out tabs on the sides.</p>
-                        <p><img src="../img/servo3.PNG" alt="bottom" width=400px height=auto class="center"></p>
-                        <p>I then extrude a new component on the sides. For the mirroring sides I Extrude a new component, starting from the other end.</p>
-                        <p><img src="../img/servo4.PNG" alt="bottom" width=400px height=auto class="center">
-                          <img src="../img/servo5.PNG" alt="bottom" width=400px height=auto class="center"></p>
-                        <p>I then combine cut the form tabs on the other components</p>
-                        <p><img src="../img/servo6.PNG" alt="bottom" width=400px height=auto class="center"></p>
-                        <p>Lastly I cut holes for the servo screws.</p>
-                        <p><img src="../img/servo7.PNG" alt="bottom" width=400px height=auto class="center"></p>
-                        <img src="../img/servofront.PNG" alt="bottom" width=600px height=auto class="center">
-                        <a href="../Fusion 360/project/servo support.f3d" class="center">Download servo_support.f3d</a>
+                        <h4 id="-u-the-tower-u-"><u>Servo Support</u></h4>
                       </div>
 
-                      <p>As I want to hold the servo support in place in the tower, I combined the Tower and the Servo support into a single file. I then move the servo support into its position.</p>
-                      <img src="../img/combine1.PNG" alt="bottom" width=500px height=auto>
-                      <p>I then sketch and extrude tabs on the servo support.</p>
-                      <img src="../img/combine2.PNG" alt="bottom" width=500px height=auto>
-                      <p>Lastly, I use combine cut tool to create tabs on the tower sides.</p>
-                      <img src="../img/combine3.PNG" alt="bottom" width=500px height=auto>
-                      <p>The final structure:</p>
+                      <div id="print" class="tabcontent">
+                        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                        <h4 id="-u-the-tower-u-"><u>3D printed spout</u></h4>
+                      </div>
+
+
 
 
             </div>

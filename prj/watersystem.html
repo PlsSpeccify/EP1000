@@ -37,6 +37,7 @@
             <li><a href="#sketch">Designing</li></a>
             <li><a href="#prototype">prototyping</li></a>
             <li><a href="#fabrication">Fabrication</li></a>
+            <li><a href="#electronics">Electronics</li></a>
         </ul>
     </div>
 
@@ -292,7 +293,7 @@
             <h3 id="-u-design-sketches-u-"><u>Fabrication</u></h3>
             <p>Once the design is done, I convert the parts to its appropriate files to prepare for fabrication.</p>
 
-            <h4><u>Laser cutting</u></h4>
+            <p><u>Laser cutting</u></p>
             <p>The Tower and Servo holder are to be cut with the laser cutter, so I convert the part faces into a dxf file. I then use LibreCAD to check the outlines are correct. I also compiled all the parts into a single file. </p>
             <div class="row">
               <div class="column">
@@ -309,10 +310,35 @@
               </div>
             </div>
 
-
-                  
+          <p><u>3D printing</u></p>
+          <p>The spouts and servo horn require 3D printing to fabricate. I first convert the file to STL</p>
+          <img src="https://i.imgur.com/RvvnzKv.png" width=700px height=auto>
+          <p>I require 3 spouts, but becuase I printed 1 for testing here I only need 2.</p>
+          <p><u>Ultimaker Cura Print settings:</u></p>
+          <ul>
+            <li>Layer height = 0.2mm</li>
+            <li>Infill: Density = 15%, Infill pattern = Grid</li>
+            <li>Print speed = 90mm/s</li>
+            <li>No support generation</li>
+            <li>No build plate adhesion</li>
+          </ul>
+          <p><a href="../Fusion 360/project/spout.stl" >Spout.stl</a>   |   <a href="../Fusion 360/project/horn.stl" >Horn.stl</a></p>
           </div>
 
+          <div id="electronics">
+            <h3><u>Electronics</u></h3>
+            <p>The idea is to direct the servo towards the pot that is detected dry, and turns on the DC motor to pump water until no longer dry.</p>
+            <p>I first prototype and program the circuit on ThinkerCAD.</p>
+            <img src="https://i.imgur.com/jyvL1Xb.png" width=700px height=auto>
+
+          <p>As ThinkerCAD does not have a water sensor, I used an LDR as replacement as both sensors are analog and works the same way.</p>
+          <video width="600" height="auto" controls >
+            <source src="https://i.imgur.com/GpdLT4u.mp4" type="video/mp4">
+          Your browser does not support the video tag :(
+          </video>
+
+
+          </div>
           
 
 

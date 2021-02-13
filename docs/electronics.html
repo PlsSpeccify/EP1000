@@ -34,8 +34,8 @@
       </ul>
       </li>
       <li><a href="#arduino"> Arduino</a><ul>
-      <li><small><a href="#blink"> Blink LED</a></li></small>
-      <li><small><a href="#analog"> Analog</a></li></small>
+      <li><small><a href="#blink"> Input devices</a></li></small>
+      <li><small><a href="#analog"> Output devices</a></li></small>
       </ul>
       </li>
     </ul>
@@ -154,7 +154,8 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
                   <div id="blink">
 
 
-                    <h4><ins><em>Blinking LED</em></ins></h4>
+                    <h4><ins><em>Input devices</em></ins></h4>
+                    <p>Input devices, also called sensors detect events or changes in its enviroment and sends information to other electronics. Most sensors give out analog signals (potentiometer, LDR, Water sensor, etc). Digital sensors transmits data in digital directly, like push buttons.    </p>
                     <p>In this project, we are to control 2 LEDs with a push button using an Arduino UNO.</p>
                     <p>The LED&#39;s should turn on in this sequence:<br></p>
 <ul>
@@ -225,10 +226,7 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
     <source src="https://i.imgur.com/1MVUmAo.mp4" type="video/mp4">
   Your browser does not support the video tag :(
   </video>
-                  </div>
-
-                  <div id="analog">
-                    <h3 id="-u-analog-inputs-u-"><u>Analog inputs</u></h3>
+  <h3 id="-u-analog-inputs-u-"><u>Analog inputs</u></h3>
                     <p>While digital signals are discrete and changes in specific steps (High and Low), analog signals can vary continuously.</p>
                     <p>Arduino UNO has 6 analog pins A0-A5, which are used when interfacing analog input devices such as potentiometers, LDR (Light dependent resistors) and other sensors.<br>
                        It uses an ADC (Analog to Digital Convertor) to convert an input voltage into a number, requiring a reference voltage and a n-bit ADC.</p>
@@ -277,7 +275,14 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
                         </video>
                   </div>
 
-                  <h4 id="-u-analog-output-rgb-led-u-"><u>Analog output + RGB LED</u></h4>
+                  <div id="analog">
+                    
+                  
+
+                  <h3 id="-u-analog-output-rgb-led-u-"><u>Output devices</u></h3>
+                  <p> Output devices, also known as actuators are components that move, control or display information. The behavior of output devices are determined by input devices.</p>
+                  <p>Actuators can create movement with Stepper motors, servo motors and DC motors. Actuators that requires to display information can be LED displays, LCD displays and other light output devices. Actuators requiring control can be Relays and transistor drivers to drive high power circuits. </p>
+                  <h4 id="-u-analog-output-rgb-led-u-"><u>Controlling a RGB LED</u></h4>
                   <p><a href="http://bit.ly/3iyn5aO" target="none">The circuit design I used.</a></p>
                   <ul>
                   <li>With LDR (Light Dependent Resistor)<br></li>
@@ -300,6 +305,7 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
 
 
                 </div>
+              </div>
 
 
 

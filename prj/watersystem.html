@@ -37,8 +37,8 @@
             <li><a href="#sketch">Designing</li></a>
             <li><a href="#prototype">prototyping</li></a>
             <li><a href="#fabrication">Fabrication</li></a>
-            <li><a href="#electronics">Electronics</li></a>
             <li><a href="#assembly">Assembly</li></a>
+            <li><a href="#electronics">Electronics</li></a>
             <li><a href="#documentation">Documentation</li></a>
         </ul>
     </div>
@@ -147,7 +147,7 @@
                           <td>1</td>
                         </tr>
                           <tr>
-                            <td>Acrylic (3mm thick)</td>
+                            <td>Acrylic (3mm thick) White / Clear</td>
                             <td>-</td>
                           </tr>
                       </table>
@@ -338,19 +338,6 @@
           <p><a href="../Fusion 360/project/spout.stl" >Spout.stl</a>   |   <a href="../Fusion 360/project/horn.stl" >Horn.stl</a></p>
           </div>--->
 
-          <div id="electronics">
-            <h3><u>Electronics</u></h3>
-            <p>The idea is to direct the servo towards the pot that is detected dry, and turns on the DC motor to pump water until no longer dry.</p>
-            <p>I first prototype and program the circuit on ThinkerCAD.</p>
-            <img src="https://i.imgur.com/jyvL1Xb.png" width=700px height=auto>
-
-          <p>As ThinkerCAD does not have a water sensor, I used an LDR as replacement as both sensors are analog and works the same way.</p>
-          <video width="600" height="auto" controls >
-            <source src="https://i.imgur.com/GpdLT4u.mp4" type="video/mp4">
-          Your browser does not support the video tag :(
-          </video>
-          </div>
-
           <div id="assembly">
             <h3><u>Assembly</u></h3>
             <p>The parts were a loose fit, so I used some acrylic adhesive to fix them together. Here I only connected the slider guard and 3 of the wall panels together, so I can still fix in the interior later.</p>
@@ -370,16 +357,53 @@
             <p>To attach the printed servo horn I simply used a screw to secure it. To secure the tube in place I used a thin wire. As the Servo can only rotate 180 degrees, I positioned the horn to face the leftmost spout opening so it can reach the other 2.</p>
             <div class="row">
               <div class="column">
-                <img src="https://i.imgur.com/8Lsvntp.jpg" height=270 width=auto>
+                <img src="https://i.imgur.com/IX8ZPiT.jpg" height=270 width=auto>
               </div>
               <div class="column">
-                <video height="270" width="auto" controls >
-                  <source src="https://i.imgur.com/Ixfcmpy.mp4" type="video/mp4">
-                Your browser does not support the video tag :(
-                </video>
+                <img src="https://i.imgur.com/8Lsvntp.jpg" height=270 width=auto>
               </div>
             </div>
           </div>
+
+          <div id="electronics">
+            <h3><u>Electronics</u></h3>
+            <p>Next is programming and integrating the electronics into the build.<br>The idea is to direct the servo towards the pot that is detected dry, and turns on the DC motor to pump water until no longer dry.</p>
+            <p>I first prototype and program the circuit on ThinkerCAD.</p>
+            <img src="https://i.imgur.com/jyvL1Xb.png" width=600px height=auto>
+
+          <p>As ThinkerCAD does not have a water sensor, I used an LDR as replacement as both sensors are analog and works similarly.</p>
+          <video width="750" height="auto" controls class="center">
+            <source src="https://i.imgur.com/GpdLT4u.mp4" type="video/mp4">
+          Your browser does not support the video tag :(
+          </video>
+          <p>I start with the output devices, which are the Servo and DC motor pump.</p>
+
+          <figure>
+            <video height="270" width="auto" controls >
+              <source src="https://i.imgur.com/Ixfcmpy.mp4" type="video/mp4">
+            Your browser does not support the video tag :(
+            </video>
+            <figcaption>Testing the Servo: I programmed it such that the servo would rotate in <br>specific angles to aim the tubing to the correct spout.</figcaption>
+          </figure>
+
+          <p>In order to interface the DC motor to the Arduino I require a transistor to run it. For this I used a 2N2222 transistor. The transistor is connected to analog pin 9.</p>
+          <div class="row">
+            <div class="column">
+              <figure>
+                <img src="https://i.imgur.com/8VNiAlJ.png" height=270 width=auto>
+                <figcaption>Circuit Diagram</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure>
+                <img src="https://i.imgur.com/qREphY1.jpg" height=270 width=auto>
+                <figcaption>Breadboard connection</figcaption>
+              </figure>
+            </div>
+          </div>
+    
+
+  
 
           <div id="documentation">
             <h3><u>Documentation</u></h3>

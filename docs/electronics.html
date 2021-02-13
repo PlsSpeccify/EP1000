@@ -273,41 +273,62 @@ Parallel connection:  1/R<small>T</small> = 1/R<small>1</small> + 1/R<small>2</s
                         <source src="https://i.imgur.com/f88zMpt.mp4" type="video/mp4">
                         Your browser does not support the video tag :(
                         </video>
+
+                        <h4 id="-u-analog-output-rgb-led-u-"><u>Controlling a RGB LED</u></h4>
+                        <p><a href="http://bit.ly/3iyn5aO" target="none">The circuit design I used.</a></p>
+                        <ul>
+                        <li>With LDR (Light Dependent Resistor)<br></li>
+                      </ul>
+                      <p>The LDR resistance changes with the light intensity that falls on it. The program causes the RGB LED to change colour as light intensity detected by the LDR changes.</p>
+                      <img width=450px height=auto src="https://i.imgur.com/lx6vb6u.jpg" > 
+                            <video width="600" height="auto" controls >
+                            <source src="https://i.imgur.com/3p36bxF.mp4" type="video/mp4">
+                            Your browser does not support the video tag :(
+                            </video>
+                      <ul>
+                        <li>With Potentiometer<br></li>
+                      </ul>
+                      <p>Using the same program, I swapped the LDR with a potentiometer, so you can control the colour of the LED by turning the knob.</p>
+                      <img width=450px height=auto src="https://i.imgur.com/GFDX6LL.jpg" > 
+                            <video width="600" height="auto" controls >
+                            <source src="https://i.imgur.com/piybTSo.mp4" type="video/mp4">
+                            Your browser does not support the video tag :(
+                            </video>
                   </div>
 
                   <div id="analog">
-                    
-                  
-
                   <h3 id="-u-analog-output-rgb-led-u-"><u>Output devices</u></h3>
                   <p> Output devices, also known as actuators are components that move, control or display information. The behavior of output devices are determined by input devices.</p>
                   <p>Actuators can create movement with Stepper motors, servo motors and DC motors. Actuators that requires to display information can be LED displays, LCD displays and other light output devices. Actuators requiring control can be Relays and transistor drivers to drive high power circuits. </p>
-                  <h4 id="-u-analog-output-rgb-led-u-"><u>Controlling a RGB LED</u></h4>
-                  <p><a href="http://bit.ly/3iyn5aO" target="none">The circuit design I used.</a></p>
-                  <ul>
-                  <li>With LDR (Light Dependent Resistor)<br></li>
-                </ul>
-                <p>The LDR resistance changes with the light intensity that falls on it. The program causes the RGB LED to change colour as light intensity detected by the LDR changes.</p>
-                <img width=450px height=auto src="https://i.imgur.com/lx6vb6u.jpg" > 
-                      <video width="600" height="auto" controls >
-                      <source src="https://i.imgur.com/3p36bxF.mp4" type="video/mp4">
-                      Your browser does not support the video tag :(
-                      </video>
-                <ul>
-                  <li>With Potentiometer<br></li>
-                </ul>
-                <p>Using the same program, I swapped the LDR with a potentiometer, so you can control the colour of the LED by turning the knob.</p>
-                <img width=450px height=auto src="https://i.imgur.com/GFDX6LL.jpg" > 
-                      <video width="600" height="auto" controls >
-                      <source src="https://i.imgur.com/piybTSo.mp4" type="video/mp4">
-                      Your browser does not support the video tag :(
-                      </video>
+                  <h4 id="-u-analog-output-rgb-led-u-"><u>Servo motor control knob</u></h4>
+                  <p>I interface a potentiometer to control the rotation of a positional servo motor.</p>
+                  <p> The connection is simple: Potentiometer is connected to pin A0 and Servo motor connected to analog pin 9.</p>
+                  <p>Program:</p>
+                  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include &lt;Servo.h&gt;</span>
 
+Servo servo1;  
 
-                </div>
+<span style="color: #333399; font-weight: bold">int</span> potpin <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>;  
+<span style="color: #333399; font-weight: bold">int</span> val;    
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">setup</span>() {
+  servo1.attach(<span style="color: #0000DD; font-weight: bold">9</span>);  
+}
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">loop</span>() {
+  val <span style="color: #333333">=</span> analogRead(potpin);            <span style="color: #888888">// reads the value of the potentiometer (value between 0 and 1023)</span>
+  val <span style="color: #333333">=</span> map(val, <span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">1023</span>, <span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">180</span>);     <span style="color: #888888">// scale it to use it with the servo (value between 0 and 180)</span>
+  servo1.write(val);                  <span style="color: #888888">// sets the servo position according to the scaled value</span>
+  delay(<span style="color: #0000DD; font-weight: bold">15</span>);                           <span style="color: #888888">// waits for the servo to get there</span>
+}
+</pre></div>
+<video width="600" height="auto" controls class="center">
+  <source src="https://i.imgur.com/ftQ0LRO.mp4" type="video/mp4">
+  Your browser does not support the video tag :(
+  </video>  
               </div>
 
-
+            </div>
 
 
 

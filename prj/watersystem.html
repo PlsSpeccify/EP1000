@@ -527,6 +527,16 @@ Servo servo1;
   }
 }
 </pre></div>
+<p>How the program works:</p>
+<ul>
+<li>The water sensors are read as analog inputs, which the readings are shown as moisture percentage.</li>
+<li>When the water sensor detects moisture level is below 30, the Boolean &quot;action&quot; will become 1, which will prevent other actions from happening while it attends to the pot first detected.</li>
+<li>The  Servo will then rotate to a specific angle, which positions the tube to the correct spout.</li>
+<li>The motor pump will then be turned on to dispense water, and turned off after 4 seconds.</li>
+<li>&quot;Action&quot; will go back to 0. indicating the action is completed.</li>
+<li>The program will go back to reading the water sensors.</li>
+</ul>
+
 
 <p>After ensuring the I/O components work, I transfer the circuit onto an Arduino nano so it can fit into the compartment.</p>
 <div class="row">
